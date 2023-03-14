@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #30454d;
+}
+.container {
+    width: 350px;
+    height: 540px;
+    border: 10px solid black;
+    margin: 15px auto;
+    border-radius: 45px;
+    background-color: #787878;
+    overflow: hidden;
+}
+.align {
+    width: 330px;
+    height: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+@font-face {
+    font-family: 'digital';
+    src: local('digital7'), local('digital-7'), url('fonts/digital-7.ttf');
+}
+.screen {
+    margin: 30px auto 0 auto;
+    height: 115px;
+    width: 318px;
+    background-color: black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 13px;
+    color: white;
+    font-family: 'digital';
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+}
+#formula-display {
+    height: fit-content;
+    width: 100%;
+    text-align: right;
+    font-size: 23px;
+    word-wrap: break-word;
+    margin-bottom: 3px;
+    color: #ff0030;
+}
+#display {
+    height: fit-content;
+    width: 100%;
+    text-align: right;
+    font-size: 44px;
+    word-wrap: break-word;
+}
+.input {
+    height: 340px;
+    width: 318px;
+    border-radius: 20px;
+    margin: 22px auto 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+.input > button {
+    width: calc((100% - 10*3px)/4);
+    border-radius: 9px;
+    border: none;
+    font-size: 25px;
+    font-weight: bolder;
+    height: calc((100% - 10*4px)/5)
+}
+.input > button:hover {
+    opacity: 0.5;
+}
+#zero {
+    width: calc((calc((100% - 10*1px)/4)) * 2)
+}
+#clear {
+    width: calc((calc((100% - 10*1px)/4)) * 2)
+}
+.fa-solid, #percentage {
+    font-size: 28px;
+    font-weight: 900;
+}
+.color1 {
+    background-color: #aaaaaa;
+}
+.color2 {
+    background-color: #FF9800;
+}
+.input > button:not(.color) {
+    background-color: #2f2f2f;
+}
