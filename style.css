@@ -3,9 +3,15 @@ body {
     margin: 0;
     background-color: #30454d;
 }
+#calculator {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container {
     width: 350px;
-    height: 540px;
+    height: fit-content;
     border: 10px solid black;
     margin: 15px auto;
     border-radius: 45px;
@@ -24,7 +30,7 @@ body {
 }
 .screen {
     margin: 30px auto 0 auto;
-    height: 115px;
+    height: fit-content;
     width: 318px;
     background-color: black;
     border-radius: 20px;
@@ -32,31 +38,29 @@ body {
     padding: 10px 13px;
     color: white;
     font-family: 'digital';
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
 }
 #formula-display {
     height: fit-content;
+    min-height: 24px;
     width: 100%;
     text-align: right;
     font-size: 23px;
-    word-wrap: break-word;
-    margin-bottom: 3px;
+    word-break: break-all;
     color: #ff0030;
+    overflow: hidden;
 }
 #display {
-    height: fit-content;
+    height: 45%;
     width: 100%;
     text-align: right;
     font-size: 44px;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 .input {
     height: 340px;
     width: 318px;
     border-radius: 20px;
-    margin: 22px auto 0 auto;
+    margin: 22px auto 30px auto;
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
