@@ -144,6 +144,12 @@ function backspace() {
     value = value.slice(0, -1);
     displaying = displaying.slice(0, -1);
     formulaDisplay('');
+    if (value == '-') {
+      // to reset the booleans so '- - +' isn't possible
+      prevIsOperator = true;
+      beforePrevIsOperator = false;
+      prevIsTrigger = false;
+    }
     if (value == '') {
       // to reset the global variables
       if (/^[\+\*\/\-]/.test(holder.slice(-1)[0])) {
@@ -152,7 +158,7 @@ function backspace() {
         prevIsTrigger = false;
       }
       // to change formula display when one of '- -' is removed
-      if (displaying.slice(-4) == '-  -') {
+      if (/^[\+|\*|\/|\-]\s\s\-$/.test(displaying.slice(-4))) {
         displaying = displaying.slice(0, -2);
         formulaDisplay('');
       }
